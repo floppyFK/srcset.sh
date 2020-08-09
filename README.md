@@ -45,7 +45,7 @@ sudo -u www-data crontab -e
 This will call the `srcset.sh` every 60 seconds to check for new files with the suffix `-responsive.jpg` within the folder `/var/www/html/grav/user/pages/`
 
 If a file with the suffix `-responsive.jpg` is found, responsive versions of this file will be created within a subfolder `<original-image-name-without-ext>`.  
-E.g. if a new file `foo-bar-responsive.jpg` is detected in the folder `var/www/html/grav/user/pages/01.home/01.main/`, a set of responsive version (based on the configuration in `srcset.conf` is created in `var/www/html/grav/user/pages/01.home/01.main/foo-bar-responsive/`:  
+For example: If a new file `foo-bar-responsive.jpg` is detected in the folder `var/www/html/grav/user/pages/01.home/01.main/`, a set of responsive version (based on the configuration in `srcset.conf` is created in `var/www/html/grav/user/pages/01.home/01.main/foo-bar-responsive/`:  
 - foo-bar-responsive-240w.jpg
 - foo-bar-responsive-320w.jpg
 - foo-bar-responsive-480w.jpg

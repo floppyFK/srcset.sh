@@ -13,11 +13,12 @@ For general usage please take a look at the original srcset.sh documentation on 
 This fork is meant as watchdog for new files in a web directory (e.g. periodically 
 called by a cronjob), which should run in the background.
   
-## Additional attributes:
+### Additional attributes:
 - `-g`: gitignore - write the created images into a .gitignore file
 - `-u`: subdirectory - place the created images in a subdirectory. The name 
 of the subdirectory is identical to the name of the source image file.
 
+### Functional diff to the original script from adrianboston
 The set of image widths / quality settings can be configured in the file 
 srcset.conf, which must be in the same directory as this srcset.sh.  
 If the file does not exist, it will be created with some default values.  

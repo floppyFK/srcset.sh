@@ -93,7 +93,7 @@ convert_file() {
 		for i in "${!resp_width[@]}"; do
 			convert $options -quality ${resp_quality[$i]} -resize ${resp_width[$i]} "$filename" "$outprefix-${resp_width[$i]}w.$type"
 			echo "$outprefix-${resp_width[$i]}w.$type" | adddate | tee -a $basedir/srcset.log
-			if [ -z "$gitignore" ]; then
+			if ! [ -z "$gitignore" ]; then
 				echo "$(basename $outprefix-${resp_width[$i]}w.$type)" >>$(dirname $outprefix-${resp_width[$i]}w.$type)/.gitignore
 			fi
 		done
